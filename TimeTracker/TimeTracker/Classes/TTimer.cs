@@ -1,26 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace TimeTracker
 {
-    public partial class Form1 : Form
+    public static class TTimer
     {
-        DateTime start_time;
-        Timer timer = new Timer();
+        //DateTime start_time;
+        //Timer timer = new Timer();
 
-        public Form1()
+        public static void Start()
         {
-            InitializeComponent();
-
-            //Processes Logic
+            /*
+             //Processes Logic
             Process[] procs = Process.GetProcesses();
 
             FillProcessesList(procs);
@@ -30,24 +24,27 @@ namespace TimeTracker
             btnStart.Click += BtnStart_Click;
             timer.Interval = 200;
             timer.Tick += Timer_Tick;
+             */
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        public static string DateToTimeSpan(DateTime date1)
         {
-            lblTimer.Text = DateToTimeSpan(start_time);
+            return DateTime.Now.Subtract(date1).ToString("h'h 'm'm 's's'");
+        }
+
+        /* private void Timer_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = TTimer.DateToTimeSpan(start_time);
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
             start_time = DateTime.Now;
-            lblTimer.Text = DateToTimeSpan(start_time);
+            lblTimer.Text = TTimer.DateToTimeSpan(start_time);
             timer.Start();
         }
 
-        string DateToTimeSpan(DateTime date1)
-        {
-            return DateTime.Now.Subtract(date1).ToString("h'h 'm'm 's's'");
-        }
+        
 
         void FillProcessesList(Process[] procs)
         {
@@ -56,6 +53,6 @@ namespace TimeTracker
                 ListViewItem item = new ListViewItem(proc.ProcessName);
                 lstProcesses.Items.Add(item);
             }
-        }
+        } */
     }
 }
