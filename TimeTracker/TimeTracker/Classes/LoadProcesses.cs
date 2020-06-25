@@ -19,8 +19,6 @@ namespace TimeTracker
         {
             List<Process> procs = new List<Process>();
 
-            Process[] debug = Process.GetProcesses();
-
             foreach (Process proc in Process.GetProcesses())
             {
                 if (proc.MainWindowHandle != (IntPtr)0x00000000 || proc.MainWindowTitle != "")

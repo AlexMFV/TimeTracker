@@ -34,7 +34,6 @@ namespace TimeTracker
         void FillProcessList()
         {
             procs = LoadProcesses.GetRunningProcesses();
-            //lstProcesses.Clear();
 
             //Add opened Processes
             foreach (Process proc in procs)

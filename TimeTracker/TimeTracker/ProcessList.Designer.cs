@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.lstProcesses = new System.Windows.Forms.ListView();
+            this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstProcesses
@@ -49,6 +49,11 @@
             this.lstProcesses.TabIndex = 2;
             this.lstProcesses.UseCompatibleStateImageBehavior = false;
             this.lstProcesses.View = System.Windows.Forms.View.Details;
+            // 
+            // columnName
+            // 
+            this.columnName.Text = "Process Name";
+            this.columnName.Width = 200;
             // 
             // btnCancel
             // 
@@ -70,11 +75,6 @@
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // columnName
-            // 
-            this.columnName.Text = "Process Name";
-            this.columnName.Width = 200;
             // 
             // ProcessList
             // 
